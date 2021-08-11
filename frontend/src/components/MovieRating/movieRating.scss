@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px 80px;
+  
+    input, select {
+      width: calc(100% - 34px);
+      border: 1px solid black;
+      border-radius: 5px;
+      height: 40px;
+      margin-bottom: 16px;
+      padding: 4px 16px;
+      font-size: 18px;
+    }
+  
+    button {
+      padding: 0 30px;
+      height: 60px;
+      border: none;
+      outline: none;
+      background: black;
+      color: white;
+      font-size: 22px;
+      line-height: 40px;
+      margin-left: auto;
+      border-radius: 5px;
+  
+      &:disabled {
+        background: #666;
+        cursor: not-allowed;
+      }
+    }
+  }
+  

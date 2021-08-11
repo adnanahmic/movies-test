@@ -1,0 +1,144 @@
+.container {
+  margin: 5% 3%;
+  display: flex;
+  justify-content: center;
+}
+
+.responsive-table {
+  width: 100%;
+  margin-bottom: 1.5em;
+  border-spacing: 0;
+
+  @media (min-width: 768px) {
+    font-size: 0.9em;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1em;
+  }
+
+  thead {
+    padding: 0;
+    border: 0;
+    position: relative;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: auto;
+
+    th {
+      background-color: rgba(29, 150, 178, 1);
+      border: 1px solid rgba(29, 150, 178, 1);
+      font-weight: normal;
+      text-align: center;
+      color: white;
+
+      &:first-of-type {
+        text-align: left;
+      }
+    }
+  }
+
+  tbody,
+  tr,
+  th,
+  td {
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  th,
+  td {
+    padding: 0.5em;
+    vertical-align: middle;
+
+    @media (min-width: 480px) {
+      padding: 0.75em 0.5em;
+    }
+
+    @media (min-width: 768px) {
+      display: table-cell;
+      padding: 0.5em;
+    }
+
+    @media (min-width: 992px) {
+      padding: 0.75em 0.5em;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0.75em;
+    }
+  }
+
+  tbody {
+    display: table-row-group;
+
+    tr {
+      margin-bottom: 1em;
+      display: table-row;
+      border-width: 1px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:nth-of-type(even) {
+        background-color: rgba(94, 93, 82, 0.1);
+      }
+    }
+
+    td {
+      text-align: right;
+
+      border-left: 1px solid rgba(29, 150, 178, 1);
+      border-bottom: 1px solid rgba(29, 150, 178, 1);
+      text-align: center;
+
+      &:last-of-type {
+        border-right: 1px solid rgba(29, 150, 178, 1);
+      }
+    }
+
+    td[type="image-title"] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      img {
+        max-height: 6em;
+
+        @media (min-width: 425px) {
+          max-height: 15em;
+        }
+      }
+
+      div {
+        width: 100%;
+
+        @media (min-width: 768px) {
+          text-align: left;
+          margin-left: 2em;
+          width: 60%;
+        }
+
+        p {
+          display: none;
+
+          @media (min-width: 768px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

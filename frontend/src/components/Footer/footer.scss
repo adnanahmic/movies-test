@@ -1,0 +1,29 @@
+footer {
+  width: 100%;
+  margin-bottom: 0px;
+  height: fit-content;
+  z-index: 1;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  p {
+    color: white;
+    padding: 0 1em;
+    font-size: 1em;
+
+    @media (min-width: 992px) {
+      font-size: 1.2em;
+    }
+  }
+
+  p[type="name"] {
+    width: 70%;
+  }
+
+  p[type="year"] {
+    width: 30%;
+    text-align: right;
+  }
+}
